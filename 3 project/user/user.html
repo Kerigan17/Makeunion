@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <a class="back" href="../index.html">← back</a>
+
+            <div class="profile">
+                <div class="profile__view">
+                    <div class="profile__image">
+                        <img src="../user/profile.svg">
+                    </div>
+                    <h1 class="name" id="profile__name"></h1>
+                </div>
+                <div class="contacts">
+                    <div class="contacts__title title">Contacts:</div>
+                    <div>Phone: <a id="contacts__phone"></a></div>
+                    <div>Email: <a id="contacts__email"></a></div>
+                </div>
+            </div>
+            <div>
+                <div class="location">
+                    <div class="location__title title">Location:</div>
+                    <div>City: <span id="location__city"></span></div>
+                    <div>Street: <span id="location__street"></span></div>
+                </div>
+            </div>
+            
+            <div class="company">
+                <div class="company__title title">About company:</div>
+                <div>Name: <a id="company__name"></a></div>
+                <div>Cach Phrase: <a id="company__phrase"></a></div>
+                <a href="#" id="company__website">Check website</a>
+            </div>
+        </div>
+    </section>
+    
+    <script src="user.js"></script>
+</body>
+</html>
