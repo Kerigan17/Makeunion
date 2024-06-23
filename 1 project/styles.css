@@ -14,9 +14,10 @@
     background-color: rgb(46, 94, 154);
     height: 400px;
     display: flex;
-    align-items: flex-end;
     border-radius: 0 0 10px 10px;
-    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+
 }
 .profile__header {
     background-color: white;
@@ -79,7 +80,7 @@
     background-color: rgb(46, 94, 154);
     color: white;
     border-radius: 10px;
-    width: 100px;
+    width: 120px;
     box-sizing: border-box;
     border: 1px solid rgb(46, 94, 154);
     cursor: pointer;
@@ -98,7 +99,7 @@
     color: white;
 }
 
-.profile__change-bg {
+.profile__change {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -106,8 +107,11 @@
     cursor: pointer;
     color: white;
     opacity: .5;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
-.profile__change-bg img {
+.profile__change img {
     width: 15px;
 }
 
@@ -118,19 +122,62 @@
 .aboute__text {
     margin-bottom: 20px;
 }
+.profile__contacts div {
+    display: flex;
+    gap: 10px;
+}
 .profile__contacts a {
     padding: 5px 15px;
     background-color: rgb(46, 94, 154);
     color: white;
     border-radius: 10px;
-    width: 100px;
     box-sizing: border-box;
     border: 1px solid rgb(46, 94, 154);
     cursor: pointer;
     transition: .3s;
     text-decoration: none;
+    display: inline-block;
 }
 .profile__contacts a:hover {
     background-color: transparent;
     color: rgb(46, 94, 154);
+}
+
+/* adaptive */
+@media (max-width: 700px) {
+    .profile__change-bg p {
+        display: none;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .profile__header {
+        left: auto;
+    }
+}
+
+@media (max-width: 600px){
+    .profile__header {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media (max-width: 470px) {
+    .profile__header {
+        width: 80%;
+    }
+    .profile__top {
+        gap: 10px;
+    }
+    .profile__contacts div {
+        flex-direction: column;
+    }
+    .profile__actions {
+        gap: 10px;
+    }
+    .btn {
+        width: 100px;
+    }
 }
